@@ -117,6 +117,98 @@ p {
     line-height: 1.5;
 }
 
+.game-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 24px;
+    padding: 18px;
+    margin-bottom: 24px;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.game-header h2 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.game-reset-btn,
+.start-btn {
+    border: none;
+    border-radius: 16px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #4dd6ff 0%, #3a8eff 100%);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-reset-btn:hover,
+.start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(58, 142, 255, 0.22);
+}
+
+.game-instruction {
+    margin: 0 0 14px;
+    color: rgba(244, 247, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+.game-info {
+    margin-bottom: 16px;
+    color: rgba(244, 247, 255, 0.85);
+    font-size: 0.95rem;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.game-tile {
+    height: 72px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.game-tile:hover {
+    transform: translateY(-2px);
+}
+
+.game-tile.active {
+    background: rgba(77, 214, 255, 0.95);
+    color: #1f1f45;
+    box-shadow: 0 10px 18px rgba(77, 214, 255, 0.25);
+}
+
+.game-tile.wrong {
+    background: rgba(255, 93, 93, 0.95);
+    color: #1f1f45;
+}
+
+.game-message {
+    min-height: 24px;
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 .message-box {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.16);
