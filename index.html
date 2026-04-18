@@ -1,25 +1,33 @@
- <!DOCTYPE html>
- <html lang="vi">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Digital Profile</title>
-     <link rel="stylesheet" href="style.css">
-     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
- </head>
- <body>
-     <div class="container">
-         <div class="profile-card">
-             <div class="avatar">
-                 <img src="images/avatar.jpg" alt="Ảnh đại diện" id="avatar">
-             </div>
-             <h1 id="name">Trần Thị Loan</h1>
-             <p id="position">Leader Marketing</p>
-             <div class="links">
-                 <a href="https://www.facebook.com/loan.cois.18" class="btn" id="facebook" target="_blank" rel="noopener">Facebook</a>
-                 <a href="https://zalo.me/0358854339" class="btn" id="zalo" target="_blank" rel="noopener">Zalo</a>
-                 <a href="https://www.linkedin.com/in/loan-profile" class="btn" id="linkedin" target="_blank" rel="noopener">LinkedIn</a>
-             </div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="avatar">
+                <img src="images/avatar.jpg" alt="Ảnh đại diện" id="avatar">
+            </div>
+            <h1 id="name">Trần Thị Loan</h1>
+            <p id="position">Leader Marketing</p>
+            <div class="links">
+                <a href="https://www.facebook.com/loan.cois.18" class="btn" id="facebook" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://zalo.me/0358854339" class="btn" id="zalo" target="_blank" rel="noopener">Zalo</a>
+                <a href="https://www.linkedin.com/in/loan-profile" class="btn" id="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <div class="share-box">
+                <h2>Chia sẻ profile</h2>
+                <div class="share-row">
+                    <input type="text" id="shareLink" readonly aria-label="Link chia sẻ profile">
+                    <button class="copy-btn" type="button" onclick="copyShareLink()">Sao chép link</button>
+                </div>
+                <p class="share-note">Gửi link này cho bạn bè để họ xem trang profile của bạn.</p>
+            </div>
             <div class="message-box">
                 <h2>Để lại lời nhắn</h2>
                 <form onsubmit="return submitMessage()">
@@ -29,11 +37,9 @@
                 </form>
                 <div class="message-preview" id="messagePreview"></div>
             </div>
-             <button class="gift-btn" onclick="launchConfetti()">Tặng quà</button>
-         </div>
-     </div>
-     <script src="script.js"></script>
- </body>
+            <button class="gift-btn" onclick="launchConfetti()">Tặng quà</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
