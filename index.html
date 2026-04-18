@@ -14,19 +14,20 @@
                 <img src="images/avatar.jpg" alt="Ảnh đại diện" id="avatar">
             </div>
             <h1 id="name">Trần Thị Loan</h1>
-            <p id="position">Leader Marketing</p>
+            <p id="position">Leader GR7HHH</p>
             <div class="links">
                 <a href="https://www.facebook.com/loan.cois.18" class="btn" id="facebook" target="_blank" rel="noopener">Facebook</a>
                 <a href="https://zalo.me/0358854339" class="btn" id="zalo" target="_blank" rel="noopener">Zalo</a>
                 <a href="https://www.linkedin.com/in/loan-profile" class="btn" id="linkedin" target="_blank" rel="noopener">LinkedIn</a>
             </div>
-            <div class="share-box">
-                <h2>Chia sẻ profile</h2>
-                <div class="share-row">
-                    <input type="text" id="shareLink" readonly aria-label="Link chia sẻ profile">
-                    <button class="copy-btn" type="button" onclick="copyShareLink()">Sao chép link</button>
-                </div>
-                <p class="share-note"></p>
+            <div class="message-box">
+                <h2>Để lại lời nhắn</h2>
+                <form onsubmit="return submitMessage()">
+                    <input type="text" id="senderName" placeholder="Tên người gửi" required>
+                    <textarea id="messageText" rows="4" placeholder="Nhập lời nhắn..." required></textarea>
+                    <button type="submit" class="send-btn">Gửi lời nhắn</button>
+                </form>
+                <div class="message-preview" id="messagePreview"></div>
             </div>
             <div class="game-box">
                 <div class="game-header">
@@ -41,14 +42,13 @@
                 <button class="start-btn" type="button" onclick="startGame()">Bắt đầu</button>
                 <div class="game-message" id="gameMessage"></div>
             </div>
-            <div class="message-box">
-                <h2>Để lại lời nhắn</h2>
-                <form onsubmit="return submitMessage()">
-                    <input type="text" id="senderName" placeholder="Tên người gửi" required>
-                    <textarea id="messageText" rows="4" placeholder="Nhập lời nhắn..." required></textarea>
-                    <button type="submit" class="send-btn">Gửi lời nhắn</button>
-                </form>
-                <div class="message-preview" id="messagePreview"></div>
+            <div class="share-box">
+                <h2>Chia sẻ profile</h2>
+                <div class="share-row">
+                    <input type="text" id="shareLink" readonly aria-label="Link chia sẻ profile">
+                    <button class="copy-btn" type="button" onclick="copyShareLink()">Sao chép link</button>
+                </div>
+                <p class="share-note"></p>
             </div>
             <button class="gift-btn" onclick="launchConfetti()">Tặng quà</button>
         </div>

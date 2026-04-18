@@ -148,6 +148,7 @@ function setNextTarget() {
     tiles.forEach((tile, index) => {
         tile.textContent = shuffled[index];
         tile.disabled = false;
+        tile.classList.remove('active', 'wrong');
     });
 }
 
@@ -167,6 +168,8 @@ function handleTileClick(index) {
     const selected = tiles[index];
     const selectedColor = selected ? selected.textContent : '';
     const message = document.getElementById('gameMessage');
+
+    tiles.forEach(tile => tile.classList.remove('active', 'wrong'));
 
     if (selectedColor === gameState.target) {
         gameState.score += 1;
@@ -193,14 +196,8 @@ function endGame() {
     document.getElementById('gameMessage').textContent = `Kết thúc! Điểm của bạn: ${gameState.score}`;
     document.querySelectorAll('.game-tile').forEach(tile => {
         tile.disabled = true;
+        tile.classList.remove('active', 'wrong');
     });
-}
-
-function endGame() {
-    clearInterval(gameState.intervalId);
-    gameState.active = false;
-    document.getElementById('gameMessage').textContent = `Kết thúc! Điểm của bạn: ${gameState.score}`;
-    highlightTile(-1);
 }
 
 function copyShareLink() {
